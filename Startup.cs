@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Test_API.Common;
 
 namespace Test_API
 {
@@ -26,6 +27,10 @@ namespace Test_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddSingleton<IConfiguration>(Configuration);
+            Tools.ConnectionString = Configuration.GetConnectionString("SecurityDB");
+
             services.AddSwaggerGen();
         }
 
