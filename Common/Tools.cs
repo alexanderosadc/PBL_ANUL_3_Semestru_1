@@ -10,17 +10,5 @@ namespace Test_API.Common
     {
         public static string ConnectionString { get; set; }
 
-
-        //public static string GetConnectionString(string name = "SecurityDB")
-        //{
-        //    return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-        //}
-
-
-        //public static string ConnectionString (string name)
-        //{
-        //    return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-        //}
-
     }
 }

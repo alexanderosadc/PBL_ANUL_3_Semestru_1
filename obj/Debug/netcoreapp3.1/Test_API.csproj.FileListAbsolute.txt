@@ -1,6 +1,5 @@
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\MVOLOSEN\Projects\Fun\Test_API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\bin\Debug\netcoreapp3.1\Test_API.exe
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\bin\Debug\netcoreapp3.1\Test_API.deps.json
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\bin\Debug\netcoreapp3.1\Test_API.runtimeconfig.json
@@ -47,3 +46,4 @@ C:\Users\MVOLOSEN\Projects\Fun\Test_API\bin\Debug\netcoreapp3.1\runtimes\win\lib
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\obj\Debug\netcoreapp3.1\Test_API.csproj.CoreCompileInputs.cache
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\obj\Debug\netcoreapp3.1\Test_API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\MVOLOSEN\Projects\Fun\Test_API\obj\Debug\netcoreapp3.1\Test_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MVOLOSEN\Projects\Fun\Test_API\obj\Debug\netcoreapp3.1\scopedcss\bundle\Test_API.styles.css

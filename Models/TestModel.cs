@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Test_API.Models
 {
-    public class Test
+    public class TestModel
     {
         public string Name { get; set; }
         public int Number { get; set; }

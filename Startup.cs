@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Test_API.Common;
+using Test_API.Data;
 
 namespace Test_API
 {
@@ -23,7 +24,6 @@ namespace Test_API
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -32,23 +32,71 @@ namespace Test_API
             Tools.ConnectionString = Configuration.GetConnectionString("SecurityDB");
 
             services.AddSwaggerGen();
+
+            services.AddScoped<ITestInterface, MockTestData>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseHttpsRedirection();
+
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
+
+
+            // ######## IMPLEMENTED SECURITY HEADERS
+
+            ////app.Use(async (context, next) =>
+            ////{
+            ////    context.Response.Headers.Add("X-Xss-Protection", "1");
+            ////    context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+            ////    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+            ////    context.Response.Headers.Add("Referrer-Policy", "no-referrer");
+            ////    context.Response.Headers.Add("Expect-CT", "max-age=0");
+            ////    context.Response.Headers.Add("Feature-Policy",
+            ////    "vibrate 'self' ; " +
+            ////    "camera 'self' ; " +
+            ////    "microphone 'self' ; " +
+            ////    "speaker 'self' https://youtube.com https://www.youtube.com ;" +
+            ////    "geolocation 'self' ; " +
+            ////    "gyroscope 'self' ; " +
+            ////    "magnetometer 'self' ; " +
+            ////    "midi 'self' ; " +
+            ////    "sync-xhr 'self' ; " +
+            ////    "push 'self' ; " +
+            ////    "notifications 'self' ; " +
+            ////    "fullscreen '*' ; " +
+            ////    "payment 'self' ; ");
+
+            ////    context.Response.Headers.Add(
+            ////    "Content-Security-Policy-Report-Only",
+            ////    "default-src 'self'; " +
+            ////    "script-src-elem 'self'" +
+            ////    "style-src-elem 'self'; " +
+            ////    "img-src 'self'; http://www.w3.org/" +
+            ////    "font-src 'self'" +
+            ////    "media-src 'self'" +
+            ////    "frame-src 'self'" +
+            ////    "connect-src "
+
+            ////    );
+            ////    await next();
+            ////});
+
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "App API V1");
 
             });
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
