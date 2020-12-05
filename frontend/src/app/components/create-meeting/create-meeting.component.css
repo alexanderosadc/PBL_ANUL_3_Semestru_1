@@ -1,5 +1,8 @@
 .formular {
-  background-color: cornflowerblue;
+  background-color: rgb(136, 88, 248);
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
 }
 .mat-icon-button {
   color: #000;
