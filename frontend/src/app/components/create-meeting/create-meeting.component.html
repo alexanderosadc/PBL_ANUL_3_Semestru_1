@@ -1,0 +1,11 @@
+<p>create-meeting works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="formular">
+    <mat-form-field  color="primary" appearance="fill">
+        <mat-label>Meeting Date</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="meetingDate" />
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1 color="accent"></mat-datepicker>
+      </mat-form-field>
+    
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>

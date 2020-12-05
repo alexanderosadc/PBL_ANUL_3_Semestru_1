@@ -1,0 +1,15 @@
+<p>nav-bar works!</p>
+<mat-tab-group dynamicHeight animationDuration="0ms" [backgroundColor]="'primary'" >
+    <mat-tab>
+        <ng-template mat-tab-label class="nav-header">Home</ng-template>
+        <app-home></app-home>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label class="nav-header">Map</ng-template>
+        <app-map></app-map>
+    </mat-tab>
+    <mat-tab >
+        <ng-template mat-tab-label class="nav-header">Create</ng-template>
+        <app-create-meeting></app-create-meeting>
+    </mat-tab>
+  </mat-tab-group>
