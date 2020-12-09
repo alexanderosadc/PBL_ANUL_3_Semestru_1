@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zdJmOnteI4Zt+y2aF/13YtQy/OtMmqxWZ58a8+3wfXZaiy+SFOJcRR0ng+jTOylhFD87etUAkqtNNfUZGEOsSA==",
+  "dgSpecHash": "6OpnwUufdyI4/bj3KHF4eIMXAFmtso2223lCM8/G3CAbHERy5o/HKCCI/HnrE3hFpN6iVAcBxbyZzAbe9trptQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\Test_API\\PBLSecurity.csproj",
+  "projectFilePath": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\SecurityPBL\\PBLSecurity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MVOLOSEN\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\MVOLOSEN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

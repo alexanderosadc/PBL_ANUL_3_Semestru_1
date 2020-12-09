@@ -6275,11 +6275,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\Test_API\\PBLSecurity.csproj",
+      "projectUniqueName": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\SecurityPBL\\PBLSecurity.csproj",
       "projectName": "PBLSecurity",
-      "projectPath": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\Test_API\\PBLSecurity.csproj",
+      "projectPath": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\SecurityPBL\\PBLSecurity.csproj",
       "packagesPath": "C:\\Users\\MVOLOSEN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\Test_API\\obj\\",
+      "outputPath": "C:\\Users\\MVOLOSEN\\Projects\\Fun\\SecurityPBL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MVOLOSEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6295,6 +6295,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6306,6 +6307,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
@@ -6364,7 +6366,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

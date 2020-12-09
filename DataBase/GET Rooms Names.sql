@@ -1,0 +1,3 @@
+
+SELECT [roomName]
+FROM Room
