@@ -21,6 +21,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 import {
   SocialLoginModule,
   SocialAuthServiceConfig,
@@ -52,6 +55,8 @@ const gClientId =
     SocialLoginModule,
     MatButtonModule,
     MatSelectModule,
+    MatCardModule,
+    MatGridListModule,
   ],
   providers: [
     {

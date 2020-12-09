@@ -1,0 +1,8 @@
+.flex-container {
+    flex-wrap: wrap;
+}
+
+.mat-card {
+    background: #c8adfa;
+    color: rgb(34, 8, 65);
+}
