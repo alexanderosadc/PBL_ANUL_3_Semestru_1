@@ -1,18 +1,14 @@
-
-
-<!-- <div *ngIf="LoggedIn === true" class=""> -->
-    <nav mat-tab-nav-bar dynamicHeight animationDuration="0ms" [backgroundColor]="'primary'">
-        <a mat-tab-link 
-            href="/home"> Home </a>
-        
-        <a mat-tab-link 
-            href="/map"> Map </a>
-        
-        <a mat-tab-link 
-            href="/create"> Create </a>
-    </nav>
-<!-- </div> -->
+<nav mat-tab-nav-bar dynamicHeight animationDuration="0ms" [backgroundColor]="'primary'">
+    <a mat-tab-link 
+        href="/home"> Home </a>
+    
+    <a mat-tab-link 
+        href="/map"> Map </a>
+    
+    <a mat-tab-link 
+        href="/create"> Create </a>
+</nav>
 
 
 
-<app-log-in (loggedIn)="onLogIn($event)" ></app-log-in>
+

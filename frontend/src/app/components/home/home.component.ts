@@ -16,13 +16,12 @@ interface Event {
 })
 export class HomeComponent implements OnInit {
   private subs: Subscription;
-  constructor() {}
   // constructor(private service: ApiService) {}
   events: Event[] = [
     { name: 'alll cmdocm', start: 'am', end: 'pm', cab: 'pizza' },
     { name: 'neel cmdocm', start: 'am', end: 'pm', cab: 'steak' },
     { name: 'alll cmdocm', start: 'am', end: 'pm', cab: 'pizza' },
-    // { name: 'neel cmdocm', start: 'am', end: 'pm', cab: 'steak' },
+    { name: 'neel cmdocm', start: 'am', end: 'pm', cab: 'steak' },
   ];
 
   ngOnInit(): void {}

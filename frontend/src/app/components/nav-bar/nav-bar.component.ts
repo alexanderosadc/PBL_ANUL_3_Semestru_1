@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,14 +6,7 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
-  public LoggedIn = false;
-
-  constructor() {}
-
   ngOnInit(): void {}
 
-  onLogIn(auth: boolean) {
-    console.log('logged in');
-    this.LoggedIn = auth;
-  }
+  n;
 }
