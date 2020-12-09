@@ -1,22 +1,18 @@
-<!-- <p>nav-bar works!</p> -->
+
 
 <!-- <div *ngIf="LoggedIn === true" class=""> -->
-    <mat-tab-group dynamicHeight animationDuration="0ms" [backgroundColor]="'primary'" >
-        <mat-tab>
-            <ng-template mat-tab-label class="nav-header">Home</ng-template>
-            <app-home></app-home>
-        </mat-tab>
-        <mat-tab>
-            <ng-template mat-tab-label class="nav-header">Map</ng-template>
-            <app-map></app-map>
-        </mat-tab>
-        <mat-tab >
-            <ng-template mat-tab-label class="nav-header">Create</ng-template>
-            <app-create-meeting></app-create-meeting>
-        </mat-tab>
-      </mat-tab-group>
+    <nav mat-tab-nav-bar dynamicHeight animationDuration="0ms" [backgroundColor]="'primary'">
+        <a mat-tab-link 
+            href="/home"> Home </a>
+        
+        <a mat-tab-link 
+            href="/map"> Map </a>
+        
+        <a mat-tab-link 
+            href="/create"> Create </a>
+    </nav>
 <!-- </div> -->
 
-<!-- <a [routerLink]="['/basic']"></a> -->
+
 
 <app-log-in (loggedIn)="onLogIn($event)" ></app-log-in>

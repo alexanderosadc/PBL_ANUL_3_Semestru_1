@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './../../services/api.service';
+// import { ApiService } from './../../services/api.service';
 import { Subscription } from 'rxjs';
 
 interface Event {
@@ -16,7 +16,8 @@ interface Event {
 })
 export class HomeComponent implements OnInit {
   private subs: Subscription;
-  constructor(private service: ApiService) {}
+  constructor() {}
+  // constructor(private service: ApiService) {}
   events: Event[] = [
     { name: 'alll cmdocm', start: 'am', end: 'pm', cab: 'pizza' },
     { name: 'neel cmdocm', start: 'am', end: 'pm', cab: 'steak' },
