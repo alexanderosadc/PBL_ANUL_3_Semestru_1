@@ -14,6 +14,6 @@ export class NavBarComponent implements OnInit {
 
   onLogIn(auth: boolean) {
     console.log('logged in');
-    this.LoggedIn = true;
+    this.LoggedIn = auth;
   }
 }

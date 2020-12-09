@@ -22,11 +22,13 @@ export class CreateMeetingComponent implements OnInit {
   public profileForm: FormGroup;
   constructor(private fb: FormBuilder) {
     this.profileForm = this.fb.group({
+      meetingName: ['', Validators.required],
       meetingStartDate: ['', Validators.required], // sa fie date timepicker
       meetingEndDate: ['', Validators.required],
       meetingStartTime: ['', Validators.required],
       meetingEndTime: ['', Validators.required],
       meetingRoom: ['', Validators.required],
+      meetingInvitees: ['', Validators.email],
     });
   }
 
