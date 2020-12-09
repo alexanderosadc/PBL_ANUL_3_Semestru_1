@@ -20,7 +20,7 @@ namespace PBLSecurity.Controllers
         }
 
         [HttpGet("getModel")]
-        public byte[] Get()
+        public String Get()
         {
             return d3Model.Get3DmodelBytes();
         }
