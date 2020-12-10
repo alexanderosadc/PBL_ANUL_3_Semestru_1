@@ -1,8 +1,12 @@
 .flex-container {
-    flex-wrap: wrap;
+    display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .mat-card {
-    background: #c8adfa;
-    color: rgb(34, 8, 65);
+    background: #eeddf5;
+    color: rgb(78, 53, 112);
+    margin: 3%;
 }
