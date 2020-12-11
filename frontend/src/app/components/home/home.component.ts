@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { ApiService } from './../../services/api.service';
+import { ApiService } from './../../services/api/api.service';
 import { Subscription } from 'rxjs';
 
 interface Event {
@@ -17,11 +17,21 @@ interface Event {
 export class HomeComponent implements OnInit {
   private subs: Subscription;
   // constructor(private service: ApiService) {}
-  events: Event[] = [
-    { name: 'alll cmdocm', start: 'am', end: 'pm', cab: 'pizza' },
-    { name: 'neel cmdocm', start: 'am', end: 'pm', cab: 'steak' },
-    { name: 'alll cmdocm', start: 'am', end: 'pm', cab: 'pizza' },
-    { name: 'neel cmdocm', start: 'am', end: 'pm', cab: 'steak' },
+  public events: Event[] = [
+    {
+      name: 'Network programming exam',
+      start: '11/01/21 11:30',
+      end: '12/01/21 13:00',
+      cab: 'Pizza',
+    },
+    {
+      name: 'Frontend team Meeting',
+      start: '07/12/20 11:00',
+      end: '07/12/20 11:00',
+      cab: 'Steak',
+    },
+    { name: 'Some meeting', start: 'am', end: 'pm', cab: 'Tacos' },
+    { name: 'Other meeting', start: 'am', end: 'pm', cab: 'Steak' },
   ];
 
   ngOnInit(): void {}
@@ -31,6 +41,7 @@ export class HomeComponent implements OnInit {
   //     .getEvents('something')
   //     .subscribe((events) => {
   //       console.log(events);
+  //        this.events = events
   //     })
   // }
 

@@ -1,7 +1,7 @@
 # for docker compose
 FROM node:10
 
-WORKDIR /usr/src/app/frontend
+WORKDIR /usr/src/app/pbl
 
 COPY package*.json ./
 

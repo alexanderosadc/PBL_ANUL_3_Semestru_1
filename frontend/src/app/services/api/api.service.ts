@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
   constructor(private httpClient: HttpClient) {}
 
-  getEvents(category: string): Observable<any> {
+  getEvents(person: string): Observable<any> {
     const link: string = `de la max}`;
     const headers = {};
     return this.httpClient.get(link);

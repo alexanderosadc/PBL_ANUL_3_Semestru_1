@@ -18,5 +18,5 @@ services:
       - "4200:4200"
     container_name: pbl-ui
     volumes:
-       - ./frontend:/usr/src/app/frontend
-       - /usr/src/app/frontend/node_modules
+       - ./frontend:/usr/src/app/pbl
+       - /usr/src/app/pbl/node_modules
