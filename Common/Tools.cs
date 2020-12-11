@@ -10,5 +10,7 @@ namespace Test_API.Common
     {
         public static string ConnectionString { get; set; }
 
+        public static readonly string CorsPolicyName = "PermissiveCorsPolicy";
+
     }
 }

@@ -67,7 +67,7 @@ namespace PBLSecurity.Services
         private bool CreateUser(string email)
         {
             var userData = email.Split('@');
-            if (userData.Length < 2)
+            if (userData.Length != 2)
                 return false;
 
             userName = userData[0];

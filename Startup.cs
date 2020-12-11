@@ -36,6 +36,15 @@ namespace Test_API
 
             services.AddSwaggerGen();
 
+            services.AddCors(o => o.AddPolicy(Tools.CorsPolicyName, builder =>
+            {
+                builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+            }));
+
             services.AddScoped<ITestInterface, MockTestData>();
             services.AddScoped<ID3ModelManager, D3ModelManager>();
             services.AddScoped<IMockAuthentication, MockAuthentication>();
@@ -54,6 +63,8 @@ namespace Test_API
             {
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
+                app.UseCors(Tools.CorsPolicyName);
+
             }
 
             app.UseSwagger();
