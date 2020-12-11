@@ -268,3 +268,8 @@ E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\obj\Debug\ne
 E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\obj\Debug\netcoreapp3.1\PBLSecurity.dll
 E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\obj\Debug\netcoreapp3.1\PBLSecurity.pdb
 E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\obj\Debug\netcoreapp3.1\PBLSecurity.genruntimeconfig.cache
+C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\System.Web.Http.Common.dll

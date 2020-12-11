@@ -12,7 +12,7 @@ namespace Test_API.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class UserController : ControllerBase
+    public class UserController : Controller
     {
         private readonly ITestInterface _demoService;
 
@@ -21,6 +21,14 @@ namespace Test_API.Controllers
             _demoService = demoService;
 
         }
+
+        //[HttpPost("authenticationSSO")]
+        //public IActionResult Post([FromBody]  ourCustomer)
+        //{
+
+
+        //    return StatusCode(200, roomStatus);
+        //}
 
         // GET api/values
         [HttpGet("all")]

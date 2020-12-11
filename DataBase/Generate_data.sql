@@ -45,7 +45,7 @@ GO
 
 --INSERT INTO Meeting (meetingTitle, startTime, endTime, creatorID, meetingStatusID, roomID)
 --VALUES 
-----	('Demo meet', '2020-12-09 13:23:44', '2020-12-12 13:23:44', 3, 2, 1)
+--	('amamamma', '2020-12-09 13:23:44', '2020-12-12 13:23:44', 3, 3, 1)
 --	('test demo meeting', '2020-12-05 14:00:00', '2020-12-15 10:00:00', 4, 2, 3)
 -------- Generate Attendees
 

@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PBLSecurity;
+using PBLSecurity.Services;
+using PBLSecurity.Services.Interfaces;
 using Test_API.Common;
 using Test_API.Data;
 
@@ -34,6 +37,9 @@ namespace Test_API
             services.AddSwaggerGen();
 
             services.AddScoped<ITestInterface, MockTestData>();
+            services.AddScoped<ID3ModelManager, D3ModelManager>();
+            services.AddScoped<IMockAuthentication, MockAuthentication>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,47 +55,6 @@ namespace Test_API
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
-
-
-            // ######## IMPLEMENTED SECURITY HEADERS
-
-            ////app.Use(async (context, next) =>
-            ////{
-            ////    context.Response.Headers.Add("X-Xss-Protection", "1");
-            ////    context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
-            ////    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
-            ////    context.Response.Headers.Add("Referrer-Policy", "no-referrer");
-            ////    context.Response.Headers.Add("Expect-CT", "max-age=0");
-            ////    context.Response.Headers.Add("Feature-Policy",
-            ////    "vibrate 'self' ; " +
-            ////    "camera 'self' ; " +
-            ////    "microphone 'self' ; " +
-            ////    "speaker 'self' https://youtube.com https://www.youtube.com ;" +
-            ////    "geolocation 'self' ; " +
-            ////    "gyroscope 'self' ; " +
-            ////    "magnetometer 'self' ; " +
-            ////    "midi 'self' ; " +
-            ////    "sync-xhr 'self' ; " +
-            ////    "push 'self' ; " +
-            ////    "notifications 'self' ; " +
-            ////    "fullscreen '*' ; " +
-            ////    "payment 'self' ; ");
-
-            ////    context.Response.Headers.Add(
-            ////    "Content-Security-Policy-Report-Only",
-            ////    "default-src 'self'; " +
-            ////    "script-src-elem 'self'" +
-            ////    "style-src-elem 'self'; " +
-            ////    "img-src 'self'; http://www.w3.org/" +
-            ////    "font-src 'self'" +
-            ////    "media-src 'self'" +
-            ////    "frame-src 'self'" +
-            ////    "connect-src "
-
-            ////    );
-            ////    await next();
-            ////});
-
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
