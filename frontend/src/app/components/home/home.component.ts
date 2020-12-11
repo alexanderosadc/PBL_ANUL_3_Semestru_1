@@ -31,7 +31,8 @@ export class HomeComponent implements OnInit {
       cab: 'Steak',
     },
     { name: 'Some meeting', start: 'am', end: 'pm', cab: 'Tacos' },
-    { name: 'Other meeting', start: 'am', end: 'pm', cab: 'Steak' },
+    { name: 'Other meeting', start: 'am', end: 'pm', cab: 'Pizza' },
+    { name: 'Yet another one', start: 'am', end: 'pm', cab: 'Steak' },
   ];
 
   ngOnInit(): void {}
