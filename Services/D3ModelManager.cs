@@ -11,13 +11,13 @@ namespace PBLSecurity
     public class D3ModelManager
     {
 
-        public byte[] Get3DmodelBytes() {
+        public string Get3DmodelBytes() {
 
-            string text = System.IO.File.ReadAllText(@"C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\3DModel\office_1");
+            byte[] byteStr = System.IO.File.ReadAllBytes(@"3DModel\office_1");
 
-            byte[] bytes = Encoding.ASCII.GetBytes(text);
+            string text = BitConverter.ToString(byteStr);
 
-            return bytes;
+            return text;
         }
     }
 }
