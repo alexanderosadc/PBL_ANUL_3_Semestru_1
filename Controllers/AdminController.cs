@@ -4,28 +4,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http;
 using Test_API.Common;
 using Test_API.Data;
 using Test_API.Models;
 
 namespace Test_API.Controllers
 {
-    [Route("api/[controller]")]
+    //[Authorize(Roles = "Admin")]
+    [Microsoft.AspNetCore.Mvc.Route("api/admin")]
     [ApiController]
 
-    public class UserController : Controller
+    public class AdminController : Controller
     {
         private readonly IMockUserManagement _userService;
         private string userID;
 
-        public UserController(IMockUserManagement demoService)
+        public AdminController(IMockUserManagement demoService)
         {
             _userService = demoService;
             userID = Tools.UserId();
         }
 
 
-        [HttpGet("meetings")]
+        [Microsoft.AspNetCore.Mvc.HttpGet("meetings")]
         public IActionResult GetAllMeetings()
         {
             var meetings = _userService.GetAllMeetingsInfo(userID);
@@ -39,8 +41,8 @@ namespace Test_API.Controllers
 
         }
 
-        [HttpPost("insertMeeting")]
-        public IActionResult InsertMeeting([FromBody] InputMeetingModel data)
+        [Microsoft.AspNetCore.Mvc.HttpPost("insertMeeting")]
+        public IActionResult InsertMeeting([Microsoft.AspNetCore.Mvc.FromBody] InputMeetingModel data)
         {
             var meeting = _userService.InsertMeeting(userID, data.meetingTitle, data.startTime, data.endTime, data.roomName, data.emails);
 
@@ -53,14 +55,5 @@ namespace Test_API.Controllers
 
         }
 
-
-        //[HttpGet("testmeet/{data}")]
-        //public IActionResult GetTEST(string data)
-        //{
-        //    var meetings = _userService.InsertMeeting(data);
-
-        //    return StatusCode(200, meetings);
-
-        //}
     }
 }

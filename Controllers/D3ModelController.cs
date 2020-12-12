@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using PBLSecurity.Services;
+using Test_API.Common;
 
 namespace PBLSecurity.Controllers
 {
@@ -38,7 +39,8 @@ namespace PBLSecurity.Controllers
         [HttpGet("getRoomStatus")]
         public IActionResult GetRoomStatus()
         {
-            roomStatus = d3Model.GetRoomStatus(2);
+            var _userID = int.Parse(Tools.UserId());
+            roomStatus = d3Model.GetRoomStatus(_userID);
             if (roomStatus == null || roomStatus.Count() == 0)
             {
                 return StatusCode(404);

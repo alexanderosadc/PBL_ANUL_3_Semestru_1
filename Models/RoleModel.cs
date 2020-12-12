@@ -5,10 +5,7 @@ using System.Threading.Tasks;
 
 namespace PBLSecurity.Models
 {
-    public class AuthenticationModel
+    public class RoleModel
     {
-        public string email { get; set; }
-        public string token { get; set; }
     }
-
 }

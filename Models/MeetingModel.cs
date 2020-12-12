@@ -11,6 +11,7 @@ namespace PBLSecurity.Models
         public string startTime { get; set; }
         public string endTime { get; set; }
         public string email { get; set; }
+        public string roomName { get; set; }
 
     }
 }
