@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PBLSecurity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,52 +15,52 @@ namespace Test_API.Controllers
 
     public class UserController : Controller
     {
-        private readonly ITestInterface _demoService;
+        private readonly IMockUserManagement _userService;
+        private string userID;
 
-        public UserController(ITestInterface demoService)
+        public UserController(IMockUserManagement demoService)
         {
-            _demoService = demoService;
+            _userService = demoService;
+            userID = Tools.UserId();
+        }
+
+
+        [HttpGet("meetings")]
+        public IActionResult GetAllMeetings()
+        {
+            var meetings = _userService.GetAllMeetingsInfo(userID);
+
+            if (meetings == null || meetings.Count() == 0)
+            {
+                return StatusCode(404);
+            }
+
+            return StatusCode(200, meetings);
 
         }
 
-        //[HttpPost("authenticationSSO")]
-        //public IActionResult Post([FromBody]  ourCustomer)
+        [HttpPost("insertMeeting")]
+        public IActionResult InsertMeeting([FromBody] InputMeetingModel data)
+        {
+            var meeting = _userService.InsertMeeting(userID, data.meetingTitle, data.startTime, data.endTime, data.roomName, data.emails);
+
+            if (meeting == false)
+            {
+                return StatusCode(404);
+            }
+
+            return StatusCode(200);
+
+        }
+
+
+        //[HttpGet("testmeet/{data}")]
+        //public IActionResult GetTEST(string data)
         //{
+        //    var meetings = _userService.InsertMeeting(data);
 
+        //    return StatusCode(200, meetings);
 
-        //    return StatusCode(200, roomStatus);
         //}
-
-        // GET api/values
-        [HttpGet("all")]
-        public ActionResult<List<TestModel>> GetAll()
-        {
-            return _demoService.GetAllTestModels();
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

@@ -45,7 +45,7 @@ namespace Test_API
                     .AllowCredentials();
             }));
 
-            services.AddScoped<ITestInterface, MockTestData>();
+            services.AddScoped<IMockUserManagement, MockUserManagement>();
             services.AddScoped<ID3ModelManager, D3ModelManager>();
             services.AddScoped<IMockAuthentication, MockAuthentication>();
 

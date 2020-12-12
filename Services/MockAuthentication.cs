@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Test_API.Common;
@@ -19,12 +20,16 @@ namespace PBLSecurity.Services
         private string userCompany;
         private string _userID;
         private string authProvider;
-
+        private string path;
+    
 
         public MockAuthentication()
         {
             db = new SqlConnection(Tools.ConnectionString);
             authProvider = "GMAIL";
+            path = @"Common\UserID.txt";
+            //(@"3DModel\office_1")
+
         }
 
         public bool CheckAuth(string email, string token)
@@ -38,10 +43,42 @@ namespace PBLSecurity.Services
 
                 _userID = ExtractUserID();
 
+                InsertIDToFile(_userID);
+
                 CreateAuth(email, token, _userID);
                 return true;
             }
+
+            ExtractLoggedUserID(email);
             return true;
+        }
+
+        private void ExtractLoggedUserID(string email)
+        {
+            var userData = email.Split('@');
+
+            userName = userData[0];
+            userCompany = userData[1];
+
+            sql = @"SELECT userID
+                    FROM [User]
+                    WHERE [name] = @userName AND company = @userCompany";
+
+            var userID = this.db.Query<string>(sql, new { userName, userCompany }).FirstOrDefault();
+
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine(userID);
+            }
+        }
+
+        private void InsertIDToFile(string userID)
+        {
+
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine(userID);
+            }
         }
 
         private void CreateAuth(string email, string token, string userID)

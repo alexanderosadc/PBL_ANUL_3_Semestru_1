@@ -11,6 +11,15 @@ DECLARE @meetingID int = 5;
 DECLARE @userID int = 1;
 DECLARE @email nvarchar(255) = 'alex@utm.md'
 
+--SELECT TOP (1000) [meetingID]
+--      ,[meetingTitle]
+--      ,[startTime]
+--      ,[endTime]
+--      ,[creatorID]
+--      ,[meetingStatusID]
+--      ,[roomID]
+--  FROM [PBLSecurity].[dbo].[Meeting]
+
 
 -- insert info about meeting
 --INSERT INTO [Meeting] (meetingTitle, startTime, endTime, creatorID, meetingStatusID, roomID)
@@ -30,3 +39,47 @@ DECLARE @email nvarchar(255) = 'alex@utm.md'
 --INSERT INTO Attendees(meetingID, userID)
 --VALUES
 	--(@meetingID, @userID)
+
+
+
+
+
+-------######################################
+
+
+--- Have room ID
+--SELECT [roomID]
+--  FROM Room
+--  WHERE roomName = 'Death Star'
+
+--SELECT roomStatusID
+--FROM Room_Status
+--WHERE [name] = 'Created'
+-- Change room status 
+
+--Update Room
+--SET roomStatusID = 5
+--WHERE roomName = 'Death Star'
+
+--check if name is not already used
+--SELECT meetingID
+--FROM Meeting
+--WHERE meetingTitle = 'problem1'
+----insert data in meeting
+
+--SELECT TOP (1000) [meetingID]
+--      ,[meetingTitle]
+--      ,[startTime]
+--      ,[endTime]
+--      ,[creatorID]
+--      ,[meetingStatusID]
+--      ,[roomID]
+--  FROM [PBLSecurity].[dbo].[Meeting]
+
+--INSERT INTO [Authentication] (email, authProvider, token, userID)
+--VALUES
+--	(@email, @authProvider, @token, @userID)
+
+--INSERT INTO (meetingTitle, startTime, endTime, creatorID, meetingStatusID, roomID)
+--VALUES 
+--	(@meetingTitle, @startTime, @endTime, @creatorID, @meetingStatusID, @roomID)
