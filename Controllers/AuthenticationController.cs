@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Test_API.Common;
 
 namespace PBLSecurity.Controllers
 {
@@ -25,6 +26,7 @@ namespace PBLSecurity.Controllers
         [HttpPost("checkSSO")]
         public IActionResult CheckPost([FromBody] AuthenticationModel data)
         {
+            
             bool isChecked = _auth.CheckAuth(data.email, data.token);
 
             if (isChecked == false)

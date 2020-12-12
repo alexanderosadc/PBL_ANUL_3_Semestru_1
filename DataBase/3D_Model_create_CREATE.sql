@@ -4,7 +4,7 @@
 -- tables
 -- Table: Attendees
 CREATE TABLE Attendees (
-    attendeesID int  NOT NULL,
+    attendeesID int  AUTO_INCREMENT,
     meetingID int  NOT NULL,
     userID int  NOT NULL,
     CONSTRAINT Attendees_pk PRIMARY KEY  (attendeesID)
@@ -12,7 +12,7 @@ CREATE TABLE Attendees (
 
 -- Table: Authentication
 CREATE TABLE Authentication (
-    authID int  NOT NULL,
+    authID int  AUTO_INCREMENT,
     authProvider nvarchar(128)  NOT NULL,
     email nvarchar(320)  NOT NULL,
     token nvarchar(255)  NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Authentication (
 
 -- Table: Meeting
 CREATE TABLE Meeting (
-    meetingID int  NOT NULL,
+    meetingID int  AUTO_INCREMENT,
     meetingTitle nvarchar(128)  NOT NULL,
     startTime smalldatetime  NOT NULL,
     endTime smalldatetime  NOT NULL,
@@ -34,14 +34,14 @@ CREATE TABLE Meeting (
 
 -- Table: Meeting_Status
 CREATE TABLE Meeting_Status (
-    meetingStatusID int  NOT NULL,
+    meetingStatusID int  AUTO_INCREMENT,
     name nvarchar(128)  NOT NULL,
     CONSTRAINT Meeting_Status_pk PRIMARY KEY  (meetingStatusID)
 );
 
 -- Table: Room
 CREATE TABLE Room (
-    roomID int  NOT NULL,
+    roomID int  AUTO_INCREMENT,
     roomName nvarchar(128)  NOT NULL,
     roomStatusID int  NOT NULL,
     CONSTRAINT Room_pk PRIMARY KEY  (roomID)
@@ -49,14 +49,14 @@ CREATE TABLE Room (
 
 -- Table: Room_Status
 CREATE TABLE Room_Status (
-    roomStatusID int  NOT NULL,
+    roomStatusID int  AUTO_INCREMENT,
     name nvarchar(128)  NOT NULL,
     CONSTRAINT Room_Status_pk PRIMARY KEY  (roomStatusID)
 );
 
 -- Table: User
 CREATE TABLE "User" (
-    userID int  NOT NULL,
+    userID int  AUTO_INCREMENT,
     name nvarchar(128)  NOT NULL,
     isAdmin bit  NOT NULL,
     company nvarchar(128)  NOT NULL,

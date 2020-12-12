@@ -51,7 +51,7 @@ namespace Test_API
             //                          }
             //                      ));
 
-            services.AddScoped<ITestInterface, MockTestData>();
+            services.AddScoped<IMockUserManagement, MockUserManagement>();
             services.AddScoped<ID3ModelManager, D3ModelManager>();
             services.AddScoped<IMockAuthentication, MockAuthentication>();
 

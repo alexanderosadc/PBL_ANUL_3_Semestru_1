@@ -1,4 +1,5 @@
 
+
 DECLARE @email nvarchar(255) = 'notalex@utm.md'
 DECLARE @token nvarchar(255) = 'sdasfdsbnwfdsfsd'
 --DECLARE @email nvarchar(255) = 'alex@utm.md'
