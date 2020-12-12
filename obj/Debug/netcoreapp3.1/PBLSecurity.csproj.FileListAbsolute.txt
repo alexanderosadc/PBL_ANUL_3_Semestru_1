@@ -273,3 +273,8 @@ C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\System.Web.Ht
 C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\MVOLOSEN\Projects\Fun\SecurityPBL\bin\Debug\netcoreapp3.1\System.Web.Http.Common.dll
+E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\University\PBL_Anul_3_Semsetrul_1_Back_End\PBL_ANUL_3_Semestru_1\bin\Debug\netcoreapp3.1\System.Web.Http.Common.dll

@@ -38,7 +38,7 @@ namespace PBLSecurity.Controllers
         [HttpGet("getRoomStatus")]
         public IActionResult GetRoomStatus()
         {
-            roomStatus = d3Model.GetRoomStatus(6);
+            roomStatus = d3Model.GetRoomStatus(2);
             if (roomStatus == null || roomStatus.Count() == 0)
             {
                 return StatusCode(404);

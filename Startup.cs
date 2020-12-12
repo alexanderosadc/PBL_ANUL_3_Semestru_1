@@ -36,14 +36,20 @@ namespace Test_API
 
             services.AddSwaggerGen();
 
-            services.AddCors(o => o.AddPolicy(Tools.CorsPolicyName, builder =>
+            services.AddCors(option => option.AddPolicy(Tools.CorsPolicyName, builder =>
             {
                 builder
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials();
+                    .AllowAnyHeader();
             }));
+            //services.AddCors(options =>
+            //    options.AddPolicy(name: Tools.CorsPolicyName,
+            //                      builder =>
+            //                          {
+            //                              builder.WithOrigins("https://localhost:4200");
+            //                          }
+            //                      ));
 
             services.AddScoped<ITestInterface, MockTestData>();
             services.AddScoped<ID3ModelManager, D3ModelManager>();
@@ -63,8 +69,6 @@ namespace Test_API
             {
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
-                app.UseCors(Tools.CorsPolicyName);
-
             }
 
             app.UseSwagger();
@@ -77,6 +81,7 @@ namespace Test_API
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(Tools.CorsPolicyName);
 
             app.UseEndpoints(endpoints =>
             {
