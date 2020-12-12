@@ -28,11 +28,12 @@ namespace Test_API.Data
 	                      ,mt.endTime
 	                      ,att.userID
 	                      ,aut.email
+						  ,rm.roomName
                     FROM Meeting as mt
                     LEFT OUTER JOIN [Attendees] AS att On mt.meetingID = att.meetingID
-			                    --AND att.userID IS NOT NULL
                     LEFT OUTER JOIN [User] AS us ON att.userID = us.userID  
                     LEFT OUTER JOIN [Authentication] AS aut ON us.userID = aut.userID
+					LEFT OUTER JOIN [Room] AS rm ON rm.roomID = mt.roomID
                     WHERE 
 	                    att.userID = @userID OR
 	                    mt.creatorID = @userID 
