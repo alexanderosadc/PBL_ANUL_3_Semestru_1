@@ -78,7 +78,7 @@ namespace Test_API.Data
 
         private int GetUserIDByEmail(string email)
         {
-
+            Console.WriteLine("Proshlo");
             sql = @"SELECT us.[userID]      
                       FROM [User] as us
                       INNER JOIN [Authentication] as aut ON aut.userID = us.userID
